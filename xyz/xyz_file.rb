@@ -12,11 +12,15 @@ class XYZFile
     filename << "_%03d" % (target.age || 0) if target.personal?
     filename << "_#{target.id.to_s}"
     filename << "_#{Digest::SHA1.hexdigest(rand(10000).to_s)[0,8]}"
-    truncated_title = target.title.gsub(/[^\[a-z\]]/i, '').downcase
-    truncate_to = truncated_title.length > 9 ? 9 : truncated_title.length
-    filename << "_#{truncated_title[0..(truncate_to)]}"
+    filename << "_#{truncated_title}"
     filename << ".jpg"
     return filename
+  end
+
+  def truncated_title
+    truncated_title = target.title.gsub(/[^\[a-z\]]/i, '').downcase
+    truncate_to = truncated_title.length > 9 ? 9 : truncated_title.length
+    truncated_title[0..(truncate_to)]
   end
 
 end
