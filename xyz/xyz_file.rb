@@ -6,15 +6,17 @@ class XYZFile
   end
 
   def name
-    filename = publication_day
-    filename << category
-    filename << kind
+    filename = ""
+    filename << prefix
     filename << "_#{age}" if target.personal?
     filename << "_#{target.id}"
     filename << "_#{noise}"
     filename << "_#{truncated_title}"
-    filename << ".jpg"
-    return filename
+    "#{filename}.jpg"
+  end
+
+  def prefix
+    [publication_day, category, kind].join
   end
 
   def publication_day
