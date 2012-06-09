@@ -4,7 +4,8 @@ describe XYZService do
 
   let(:target) do
     messages = {
-      :publish_on => Date.new(2012, 3, 14)
+      :publish_on => Date.new(2012, 3, 14),
+      :xyz_category_prefix => 'abc'
     }
     stub(:target, messages)
   end
