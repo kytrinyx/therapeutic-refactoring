@@ -6,13 +6,13 @@ class XYZFile
   end
 
   def name
-    filename = ""
+    filename = []
     filename << prefix
-    filename << "_#{age}" if target.personal?
-    filename << "_#{target.id}"
-    filename << "_#{noise}"
-    filename << "_#{truncated_title}"
-    "#{filename}.jpg"
+    filename << age if target.personal?
+    filename << target.id
+    filename << noise
+    filename << truncated_title
+    "#{filename.join('_')}.jpg"
   end
 
   def prefix
