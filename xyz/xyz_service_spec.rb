@@ -8,7 +8,7 @@ describe XYZService do
     messages = {
       :publish_on => Date.new(2012, 2, 7),
       :xyz_category_prefix => 'abc',
-      :kind => 'unicorn',
+      :kind => 'magic_unicorn',
       :personal? => false,
       :id => 1337,
       :title => 'magic & superglue'
@@ -19,7 +19,7 @@ describe XYZService do
   subject { XYZService.xyz_filename(target) }
 
   it 'works' do
-    subject.should match(/07abcunicorn_1337_[0-9a-f]{8}_magicsuper\.jpg/)
+    subject.should match(/07abcmagicunicorn_1337_[0-9a-f]{8}_magicsuper\.jpg/)
   end
 
 end
