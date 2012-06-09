@@ -27,4 +27,9 @@ describe XYZService do
     subject.should match(/07abcmagicunicorn_1337_[0-9a-f]{8}_i\[sparkle\]\.jpg/)
   end
 
+  it 'personalizes' do
+    target.stub(:personal? => true, :age => 42)
+    subject.should match(/07abcmagicunicorn_042_1337_[0-9a-f]{8}_isparkles\.jpg/)
+  end
+
 end
