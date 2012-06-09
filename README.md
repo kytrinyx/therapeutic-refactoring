@@ -55,3 +55,7 @@ the same as the defaults.
 
 Requiring libraries that aren't used add an overhead, especially in your tests.
 Also, they add noise and potential confusion to the codebase.
+
+### Unnecessary String Interpolation
+
+A string is a string is a string.
