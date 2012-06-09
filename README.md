@@ -28,3 +28,7 @@ Mostly explicit returns are worthless.
 
 Obviously, there are exceptions, such as with guard clauses.
 
+### Trailing Whitespace
+
+Ugly and messy. Editors can (and should) be configured to show you this.
+
