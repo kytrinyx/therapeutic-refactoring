@@ -71,3 +71,7 @@ e.g.
 * calculating where to truncate a string using match-if brackets
 * doing a case insensitive regex, and then downcasing afterwards
 
+### Duplicated Tests
+
+With this I mean tests that test the same thing in many ways, instead of
+designing a better test.
