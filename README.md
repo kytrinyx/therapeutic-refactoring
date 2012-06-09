@@ -9,6 +9,35 @@ This is the main example in the talk.
 Each step in the process of first adding characterization tests
 and then refactoring has been committed separately.
 
+### Add Characterization Tests
+
+Basic assumption: The code works. Whatever it is doing now is the correct behavior.
+
+Inputs and outputs are unknown. Lean on the tests by using a stub for the inputs, and
+some arbitrary expectation in the assertion.
+
+* Failing tests tell you which inputs are missing. Add these to the stub.
+* When all the inputs are in place, the assertion will fail, telling you what the output should look like.
+* Go through the code and inspect the details. Choose better inputs to exercise the code.
+* Call each branch of every conditional from a test.
+
+### Perform Refactoring
+
+This uses the prescription *Replace Method with Method Object* from Martin
+Fowler's book _Refactoring_.
+
+* Create a class
+* Add an initializer that takes the same arguments as the method
+* Create an attribute on the class for each of the arguments
+* Copy/paste the method in, and change the method signature to not take any arguments
+* Replace the body of the old method with a call to the new one
+* Extract each chunk of code that can be identified as being a sub-step, naming these appropriately
+* Identify and delete codejunk (see below)
+* Play the game of *Five Differences*. Sometimes this doesn't show you anything useful,
+  but occasionally it gives you a new perspective and some new ideas.
+
+Remember to run the tests at every step.
+
 ## Codejunk
 
 A loan word from the field of information design, inspired by Edward Tufte's
