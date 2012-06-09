@@ -6,10 +6,6 @@ class XYZFile
   end
 
   def name
-    # File format:
-    # [day of month zero-padded][three-letter prefix] \
-    # _[kind]_[age_if_kind_personal]_[target.id] \
-    # _[8 random chars]_[10 first chars of title].jpg
     filename = "#{target.publish_on.strftime("%d")}"
     filename << "#{target.xyz_category_prefix}"
     filename << "#{target.kind.gsub("_", "")}"
