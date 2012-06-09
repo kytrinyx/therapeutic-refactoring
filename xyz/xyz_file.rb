@@ -8,7 +8,7 @@ class XYZFile
   def name
     filename = "#{publication_day}"
     filename << "#{category}"
-    filename << "#{target.kind.gsub("_", "")}"
+    filename << "#{kind}"
     filename << "_#{age}" if target.personal?
     filename << "_#{target.id.to_s}"
     filename << "_#{noise}"
@@ -23,6 +23,10 @@ class XYZFile
 
   def category
     target.xyz_category_prefix
+  end
+
+  def kind
+    target.kind.gsub("_", "")
   end
 
   def truncated_title
