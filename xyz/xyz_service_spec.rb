@@ -2,7 +2,11 @@ require_relative './xyz_service'
 
 describe XYZService do
 
-  subject { XYZService.xyz_filename(stub) }
+  let(:target) do
+    stub(:target)
+  end
+
+  subject { XYZService.xyz_filename(target) }
 
   it 'works' do
     subject.should eq('something')
