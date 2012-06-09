@@ -46,3 +46,8 @@ What you don't need are
 * parentheses around a single method call
 * parentheses around an arithmetic expression where precedency is perfectly clear
 
+### Explicit Default Parameters
+
+There's no need to pass in arguments to a method when these are exactly
+the same as the defaults.
+
