@@ -6,8 +6,8 @@ class XYZFile
   end
 
   def name
-    filename = "#{target.publish_on.strftime("%d")}"
-    filename << "#{target.xyz_category_prefix}"
+    filename = "#{publication_day}"
+    filename << "#{category}"
     filename << "#{target.kind.gsub("_", "")}"
     filename << "_#{age}" if target.personal?
     filename << "_#{target.id.to_s}"
@@ -15,6 +15,14 @@ class XYZFile
     filename << "_#{truncated_title}"
     filename << ".jpg"
     return filename
+  end
+
+  def publication_day
+    target.publish_on.strftime("%d")
+  end
+
+  def category
+    target.xyz_category_prefix
   end
 
   def truncated_title
