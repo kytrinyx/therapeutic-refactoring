@@ -21,3 +21,10 @@ term _chartjunk_.
 * comments that are wrong
 * comments that are imprecise
 * comments that are misspelled
+
+### Explicit Return
+
+Mostly explicit returns are worthless.
+
+Obviously, there are exceptions, such as with guard clauses.
+
