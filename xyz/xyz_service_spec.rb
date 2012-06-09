@@ -7,7 +7,8 @@ describe XYZService do
       :publish_on => Date.new(2012, 3, 14),
       :xyz_category_prefix => 'abc',
       :kind => 'unicorn',
-      :personal? => false
+      :personal? => false,
+      :id => 1337
     }
     stub(:target, messages)
   end
