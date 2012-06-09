@@ -3,7 +3,10 @@ require_relative './xyz_service'
 describe XYZService do
 
   let(:target) do
-    stub(:target)
+    messages = {
+      :publish_on => Date.new(2012, 3, 14)
+    }
+    stub(:target, messages)
   end
 
   subject { XYZService.xyz_filename(target) }
