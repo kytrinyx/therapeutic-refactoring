@@ -11,7 +11,7 @@ describe XYZService do
       :kind => 'magic_unicorn',
       :personal? => false,
       :id => 1337,
-      :title => 'I <3 Sparkles!!1!'
+      :title => 'I <3 SPARKLY Sparkles!!1!'
     }
     stub(:target, messages)
   end
@@ -19,7 +19,7 @@ describe XYZService do
   subject { XYZService.xyz_filename(target) }
 
   it 'works' do
-    subject.should match(/07abcmagicunicorn_1337_[0-9a-f]{8}_isparkles\.jpg/)
+    subject.should match(/07abcmagicunicorn_1337_[0-9a-f]{8}_isparklysp\.jpg/)
   end
 
   it 'leaves square brackets' do
@@ -29,12 +29,12 @@ describe XYZService do
 
   it 'personalizes' do
     target.stub(:personal? => true, :age => 42)
-    subject.should match(/07abcmagicunicorn_042_1337_[0-9a-f]{8}_isparkles\.jpg/)
+    subject.should match(/07abcmagicunicorn_042_1337_[0-9a-f]{8}_isparklysp\.jpg/)
   end
 
   it 'handles nil age' do
     target.stub(:personal? => true, :age => nil)
-    subject.should match(/07abcmagicunicorn_000_1337_[0-9a-f]{8}_isparkles\.jpg/)
+    subject.should match(/07abcmagicunicorn_000_1337_[0-9a-f]{8}_isparklysp\.jpg/)
   end
 
 end
