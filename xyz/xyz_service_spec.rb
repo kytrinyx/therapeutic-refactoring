@@ -1,4 +1,5 @@
 require_relative './xyz_service'
+require 'digest'
 require 'date'
 
 describe XYZService do
@@ -18,7 +19,7 @@ describe XYZService do
   subject { XYZService.xyz_filename(target) }
 
   it 'works' do
-    subject.should eq('14abcunicorn_1337_cb6c53bc_magicsuper.jpg')
+    subject.should match(/14abcunicorn_1337_[0-9a-f]{8}_magicsuper\.jpg/)
   end
 
 end
