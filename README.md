@@ -51,3 +51,7 @@ What you don't need are
 There's no need to pass in arguments to a method when these are exactly
 the same as the defaults.
 
+### Unnecessary Dependencies
+
+Requiring libraries that aren't used add an overhead, especially in your tests.
+Also, they add noise and potential confusion to the codebase.
