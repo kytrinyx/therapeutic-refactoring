@@ -14,6 +14,8 @@ and then refactoring has been committed separately.
 A loan word from the field of information design, inspired by Edward Tufte's
 term _chartjunk_.
 
+With thanks to Carl Manaster, who first introduced me to the idea.
+
 ### Lousy Comments
 
 * comments that state the obvious
@@ -75,3 +77,4 @@ e.g.
 
 With this I mean tests that test the same thing in many ways, instead of
 designing a better test.
+
