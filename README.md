@@ -59,3 +59,15 @@ Also, they add noise and potential confusion to the codebase.
 ### Unnecessary String Interpolation
 
 A string is a string is a string.
+
+### Unnecessary Hard Work
+
+Don't do work that the computer is (or should be) doing for you.
+
+e.g.
+
+* calling `to_s` inside a string interpolation
+* calling mapping over an array with `to_s`, only to call `join` on it
+* calculating where to truncate a string using match-if brackets
+* doing a case insensitive regex, and then downcasing afterwards
+
