@@ -10,7 +10,7 @@ class XYZFile
     filename << category
     filename << kind
     filename << "_#{age}" if target.personal?
-    filename << "_#{target.id.to_s}"
+    filename << "_#{target.id}"
     filename << "_#{noise}"
     filename << "_#{truncated_title}"
     filename << ".jpg"
