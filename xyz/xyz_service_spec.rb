@@ -11,7 +11,7 @@ describe XYZService do
       :kind => 'magic_unicorn',
       :personal? => false,
       :id => 1337,
-      :title => 'magic & superglue'
+      :title => 'I <3 Sparkles!!1!'
     }
     stub(:target, messages)
   end
@@ -19,7 +19,7 @@ describe XYZService do
   subject { XYZService.xyz_filename(target) }
 
   it 'works' do
-    subject.should match(/07abcmagicunicorn_1337_[0-9a-f]{8}_magicsuper\.jpg/)
+    subject.should match(/07abcmagicunicorn_1337_[0-9a-f]{8}_isparkles\.jpg/)
   end
 
 end
