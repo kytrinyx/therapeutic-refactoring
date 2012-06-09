@@ -1,4 +1,5 @@
 require_relative './xyz_service'
+require 'date'
 
 describe XYZService do
 
@@ -8,7 +9,8 @@ describe XYZService do
       :xyz_category_prefix => 'abc',
       :kind => 'unicorn',
       :personal? => false,
-      :id => 1337
+      :id => 1337,
+      :title => 'magic & superglue'
     }
     stub(:target, messages)
   end
