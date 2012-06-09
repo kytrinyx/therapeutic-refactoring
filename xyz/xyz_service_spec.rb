@@ -18,7 +18,7 @@ describe XYZService do
   subject { XYZService.xyz_filename(target) }
 
   it 'works' do
-    subject.should eq('something')
+    subject.should eq('14abcunicorn_1337_cb6c53bc_magicsuper.jpg')
   end
 
 end
