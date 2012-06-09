@@ -32,3 +32,7 @@ Obviously, there are exceptions, such as with guard clauses.
 
 Ugly and messy. Editors can (and should) be configured to show you this.
 
+### Commented Out Code
+
+Don't let the rotting decay ruin your perfectly good codebase.
+
