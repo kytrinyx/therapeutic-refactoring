@@ -1,6 +1,6 @@
 # Therapeutic Refactoring
 
-Code samples for the talk Therapeutic Refactoring.
+Code samples for the talk [Therapeutic Refactoring](http://www.youtube.com/watch?v=J4dlF0kcThQ "Watch on YouTube").
 
 ## XYZ Service
 
