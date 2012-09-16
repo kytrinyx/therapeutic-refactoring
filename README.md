@@ -53,19 +53,13 @@ With thanks to Carl Manaster, who first introduced me to the idea.
 * comments that are imprecise
 * comments that are misspelled
 
-### Explicit Return
-
-Mostly explicit returns are worthless.
-
-Obviously, there are exceptions, such as with guard clauses.
-
 ### Trailing Whitespace
 
 Ugly and messy. Editors can (and should) be configured to show you this.
 
 ### Commented Out Code
 
-Don't let the rotting decay ruin your perfectly good codebase.
+Don't let rotting decay ruin your perfectly good codebase.
 
 ### Unnecessary Parentheses
 
@@ -87,9 +81,9 @@ the same as the defaults.
 Requiring libraries that aren't used add an overhead, especially in your tests.
 Also, they add noise and potential confusion to the codebase.
 
-### Unnecessary String Interpolation
+### Evaluate a boolean so you can set a boolean so you can check the boolean
 
-A string is a string is a string.
+Just return the boolean you started out with.
 
 ### Unnecessary Hard Work
 
@@ -97,6 +91,7 @@ Don't do work that the computer is (or should be) doing for you.
 
 e.g.
 
+* stringifying strings
 * calling `to_s` inside a string interpolation
 * calling mapping over an array with `to_s`, only to call `join` on it
 * calculating where to truncate a string using match-if brackets
@@ -104,6 +99,6 @@ e.g.
 
 ### Duplicated Tests
 
-With this I mean tests that test the same thing in many ways, instead of
+By this I mean tests that test the same thing in many ways, instead of
 designing a better test.
 
