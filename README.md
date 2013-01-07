@@ -9,6 +9,22 @@ This is the main example in the talk.
 Each step in the process of first adding characterization tests
 and then refactoring has been committed separately.
 
+### Background
+
+The method is a crufty and confusing thing that lives in a very large kitchen-sink type module.
+
+The method has had a ton of churn, but at the time of the refactoring it had been stable for quite a while.
+
+I chose the _Replace Method with Method Object_ refactoring as a way out that would ensure that any changes I made would be completely isolated, and would not pollute the rest of the code.
+
+A method object is typically a good solution if you have a big calculation with a bunch of little temporary variables and you don't want to pass those temporary variables around. Here we only have a `target`. In other words: Sledge hammer.
+
+One could argue that the method belongs in the actual `Target` class, not some kitchen sink module, but that isn't really ideal either. This logic is **only** used in an ancillary process that is called from a command-line script, so the core application really doesn't need to know about it.
+
+In a different experiment refactoring the same method I used `delegate` from the Ruby STDLIB to create a class called `XYZTarget` that inherits from `SimpleDelegator` and takes a `Target`. In some ways I like that better. It still keeps the logic out of the main application, and it also provides a place that can attract related behavior.
+
+One thing that I didn't mention in the talk, but which might be worth noting, is that when I finished this refactoring I immediately followed up with a second tiny refactoring to remove the method in `XYZService` that simply delegated. I just instantiate the method object directly where it is used, and change the tests to do the same. That gets rid of some of the extraneous indirection that the refactoring introduces.
+
 ### Add Characterization Tests
 
 Basic assumption: The code works. Whatever it is doing now is the correct behavior.
