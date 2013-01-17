@@ -2,6 +2,8 @@
 
 Code samples for the talk [Therapeutic Refactoring](http://confreaks.com/videos/1071-cascadiaruby2012-therapeutic-refactoring "Watch on Confreaks").
 
+The slides are [on slideshare](http://www.slideshare.net/kytrinyx/therapeutic-refactoring)
+
 ## XYZ Service
 
 This is the main example in the talk.
