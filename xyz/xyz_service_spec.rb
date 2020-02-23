@@ -5,15 +5,14 @@ require 'date'
 describe XYZService do
 
   let(:target) do
-    messages = {
+    double(
       :publish_on => Date.new(2012, 2, 7),
       :xyz_category_prefix => 'abc',
       :kind => 'magic_unicorn',
       :personal? => false,
       :id => 1337,
       :title => 'I <3 SPARKLY Sparkles!!1!'
-    }
-    stub(:target, messages)
+    )
   end
 
   subject { XYZService.xyz_filename(target) }
