@@ -87,7 +87,7 @@ What you don't need are
 * empty parentheses in a method definition
 * empty parentheses for a method call without arguments
 * parentheses around a single method call
-* parentheses around an arithmetic expression where precedency is perfectly clear
+* parentheses around an arithmetic expression where precedence is perfectly clear
 
 ### Explicit Default Parameters
 
